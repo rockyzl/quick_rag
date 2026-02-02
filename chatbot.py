@@ -53,7 +53,13 @@ body, .gradio-container {
 }
 .chatbot .message,
 .chatbot .message > *,
-.chatbot .message > * > * {
+.chatbot .message > * > *,
+.chatbot .message-row,
+.chatbot .message-row *,
+.gradio-chatbot .message,
+.gradio-chatbot .message *,
+.gradio-chatbot .bubble,
+.gradio-chatbot .bubble * {
   max-width: 100% !important;
   min-width: auto !important;
   border-radius: 0 !important;
@@ -68,6 +74,9 @@ body, .gradio-container {
   background: transparent !important;
   color: var(--text) !important;
   box-shadow: none !important;
+}
+.gradio-chatbot, .gradio-chatbot * {
+  background: transparent !important;
 }
 .svelte-drgfj3 input, .svelte-drgfj3 textarea {
   border-radius: 12px !important;

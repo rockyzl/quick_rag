@@ -41,6 +41,7 @@ Then open the local URL shown in the console.
 - To see citations, include words like “reference”, “source”, or “evidence” in your question.  
 - To update how the bot addresses you, just say “Call me <name>”; location is mentioned at most once unless you bring it up again.  
 - If you type a possibly misspelled place/name, the bot will gently ask for confirmation once and then move on.
+- Sharing the Gradio link: the visible chat window history is per-browser-session, but the current code’s internal memory/user-profile are global in the process. If multiple people use the same share link at once, their profiles could mingle. To isolate users, move the memory/profile into a per-session `gr.State()` (not yet implemented here).
 
 ## Project structure
 ```

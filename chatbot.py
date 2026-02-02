@@ -52,14 +52,15 @@ body, .gradio-container {
 }
 .message {
   max-width: 86% !important;
-  min-width: 260px !important;
+  min-width: 240px !important;
   border-radius: 12px !important;
-  padding: 12px 16px !important;
+  padding: 8px 12px !important;
+  margin: 6px 0 !important;
   font-size: 15px !important;
-  line-height: 1.6 !important;
+  line-height: 1.4 !important;
   word-break: normal !important;
   white-space: normal !important;
-  display: block !important;
+  display: inline-block !important;
   border: none !important;
   background: #1b1d26;
   color: var(--text) !important;

@@ -51,24 +51,24 @@ body, .gradio-container {
   padding: 4px;
 }
 .message {
-  max-width: 86% !important;
-  min-width: 240px !important;
-  border-radius: 12px !important;
-  padding: 8px 12px !important;
-  margin: 6px 0 !important;
+  max-width: 100% !important;
+  min-width: auto !important;
+  border-radius: 0 !important;
+  padding: 4px 0 !important;
+  margin: 2px 0 !important;
   font-size: 15px !important;
   line-height: 1.4 !important;
   word-break: normal !important;
   white-space: normal !important;
-  display: inline-block !important;
+  display: block !important;
   border: none !important;
-  background: #1b1d26;
+  background: transparent !important;
   color: var(--text) !important;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.28);
+  box-shadow: none !important;
 }
 .message.user {
-  background: #1f2937;
-  border: 1px solid rgba(47,128,237,0.2);
+  background: transparent !important;
+  border: none !important;
 }
 .svelte-drgfj3 input, .svelte-drgfj3 textarea {
   border-radius: 12px !important;

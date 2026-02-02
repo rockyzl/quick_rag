@@ -225,12 +225,20 @@ def stream_response(message, history):
         if user_profile.get("location"):
             greeted_with_location = True
 
-# initiate the Gradio app
-chatbot = gr.ChatInterface(stream_response, textbox=gr.Textbox(placeholder="Send to the LLM...",
-    container=False,
-    autoscroll=True,
-    scale=7),
+# initiate the Gradio app (lightly themed)
+chatbot = gr.ChatInterface(
+    fn=stream_response,
+    chatbot=gr.Chatbot(height=520),
+    textbox=gr.Textbox(
+        placeholder="Ask anything about your PDFs (say 'reference' to see sources)...",
+        container=False,
+        autoscroll=True,
+        scale=7,
+    ),
+    title="Quick RAG Chatbot",
+    description="Conversational RAG over your PDFs. Keeps light context and shows references only when you ask.",
+    theme=gr.themes.Soft(primary_hue="indigo", neutral_hue="slate"),
 )
 
 # launch the Gradio app
-chatbot.launch()
+chatbot.launch(share=True, server_name="0.0.0.0", server_port=7860)

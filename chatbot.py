@@ -23,8 +23,8 @@ profile_llm = ChatOpenAI(temperature=0, model='gpt-4o-mini')
 
 APP_CSS = """
 body, .gradio-container {
-  background: #f6f7fb;
-  color: #0f172a;
+  background: #0b1220;
+  color: #e5e7eb;
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 .gradio-container {
@@ -33,19 +33,19 @@ body, .gradio-container {
   padding: 28px 18px 36px;
 }
 .gradio-container .prose h1, .gradio-container .prose h2, .gradio-container .prose h3 {
-  color: #0f172a;
+  color: #f8fafc;
 }
 .chatbot {
-  border-radius: 18px !important;
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
-  border: 1px solid #e2e8f0;
-  background: #ffffff;
-  padding: 8px;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  border: 1px solid #1f2937;
+  background: #111827;
+  padding: 6px;
 }
 .message {
-  max-width: 78%;
+  max-width: 82%;
   min-width: 220px;
-  border-radius: 14px !important;
+  border-radius: 10px !important;
   padding: 12px 14px !important;
   font-size: 15px !important;
   line-height: 1.55 !important;
@@ -53,38 +53,39 @@ body, .gradio-container {
   white-space: pre-wrap;
   display: inline-flex;
   align-items: flex-start;
+  border: 1px solid #1f2937;
 }
 .message.bot {
-  background: #eef2ff;
-  border: 1px solid #dfe3f7;
-  color: #1f2937;
+  background: #161e30;
+  color: #e5e7eb;
 }
 .message.user {
-  background: #e8fff3;
-  border: 1px solid #c8f3dd;
-  color: #0f172a;
+  background: #1d2a3f;
+  color: #e5e7eb;
 }
 .svelte-drgfj3 input, .svelte-drgfj3 textarea {
-  border-radius: 12px !important;
-  border: 1px solid #d7deea !important;
-  background: #ffffff !important;
-  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+  border-radius: 10px !important;
+  border: 1px solid #2d3a4f !important;
+  background: #0f172a !important;
+  color: #e5e7eb !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .gr-button-primary {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  border-radius: 12px;
+  background: linear-gradient(135deg, #6d28d9, #2563eb);
+  border-radius: 10px;
   border: none;
   box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
   font-weight: 600;
+  color: #f8fafc;
 }
 .gr-button-secondary, .gr-button {
-  border-radius: 10px;
+  border-radius: 9px;
 }
 .block.gradio-accordion, .panel {
-  border-radius: 14px;
+  border-radius: 12px;
 }
 .caption {
-  color: #475569;
+  color: #cbd5e1;
   margin-bottom: 10px;
 }
 """

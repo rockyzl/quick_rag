@@ -38,7 +38,7 @@ body, .gradio-container {
 .gradio-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 18px 18px 30px;
+  padding: 12px 12px 18px;
 }
 .gradio-container .prose h1, .gradio-container .prose h2, .gradio-container .prose h3 {
   color: var(--text);
@@ -48,12 +48,12 @@ body, .gradio-container {
   box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4);
   border: 1px solid #1b1d26;
   background: #0f1116;
-  padding: 10px;
+  padding: 4px;
 }
 .message {
   max-width: 78%;
-  border-radius: 14px !important;
-  padding: 12px 16px !important;
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
   font-size: 15px !important;
   line-height: 1.55 !important;
   word-break: break-word;

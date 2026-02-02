@@ -104,6 +104,7 @@ body, .gradio-container {
   margin-bottom: 10px;
 }
 """
+APP_CSS = ""
 
 # connect to the chromadb
 vector_store = Chroma(

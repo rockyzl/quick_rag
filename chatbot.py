@@ -43,11 +43,16 @@ body, .gradio-container {
   padding: 8px;
 }
 .message {
-  max-width: 72%;
+  max-width: 78%;
+  min-width: 220px;
   border-radius: 14px !important;
   padding: 12px 14px !important;
   font-size: 15px !important;
   line-height: 1.55 !important;
+  word-break: break-word;
+  white-space: pre-wrap;
+  display: inline-flex;
+  align-items: flex-start;
 }
 .message.bot {
   background: #eef2ff;

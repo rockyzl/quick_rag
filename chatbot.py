@@ -51,18 +51,18 @@ body, .gradio-container {
   padding: 4px;
 }
 .message {
-  max-width: 78%;
+  max-width: 86% !important;
+  min-width: 260px !important;
   border-radius: 12px !important;
-  padding: 10px 14px !important;
+  padding: 12px 16px !important;
   font-size: 15px !important;
-  line-height: 1.55 !important;
-  word-break: break-word;
-  white-space: pre-wrap;
-  display: inline-flex;
-  align-items: flex-start;
-  border: none;
+  line-height: 1.6 !important;
+  word-break: normal !important;
+  white-space: normal !important;
+  display: block !important;
+  border: none !important;
   background: #1b1d26;
-  color: var(--text);
+  color: var(--text) !important;
   box-shadow: 0 6px 12px rgba(0,0,0,0.28);
 }
 .message.user {

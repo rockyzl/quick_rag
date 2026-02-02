@@ -49,26 +49,25 @@ body, .gradio-container {
   border: 1px solid #1b1d26;
   background: #0f1116;
   padding: 4px;
+  align-items: flex-start !important;
 }
-.message {
+.chatbot .message,
+.chatbot .message > *,
+.chatbot .message > * > * {
   max-width: 100% !important;
   min-width: auto !important;
   border-radius: 0 !important;
-  padding: 4px 0 !important;
+  padding: 0 !important;
   margin: 2px 0 !important;
-  font-size: 15px !important;
-  line-height: 1.4 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
   word-break: normal !important;
   white-space: normal !important;
-  display: block !important;
+  display: inline !important;
   border: none !important;
   background: transparent !important;
   color: var(--text) !important;
   box-shadow: none !important;
-}
-.message.user {
-  background: transparent !important;
-  border: none !important;
 }
 .svelte-drgfj3 input, .svelte-drgfj3 textarea {
   border-radius: 12px !important;

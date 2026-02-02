@@ -22,29 +22,37 @@ llm = ChatOpenAI(temperature=0.5, model='gpt-4o-mini')
 profile_llm = ChatOpenAI(temperature=0, model='gpt-4o-mini')
 
 APP_CSS = """
+:root {
+  --bg: #0f1117;
+  --panel: #151821;
+  --bubble: #1c1f2a;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #2f80ed;
+}
 body, .gradio-container {
-  background: #0b1220;
-  color: #e5e7eb;
+  background: var(--bg);
+  color: var(--text);
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 .gradio-container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 28px 18px 36px;
+  padding: 24px 18px 36px;
 }
 .gradio-container .prose h1, .gradio-container .prose h2, .gradio-container .prose h3 {
-  color: #f8fafc;
+  color: var(--text);
 }
 .chatbot {
-  border-radius: 14px !important;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
-  border: 1px solid #1f2937;
-  background: #111827;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  border: 1px solid #1f2430;
+  background: var(--panel);
   padding: 6px;
 }
 .message {
   max-width: 82%;
-  min-width: 220px;
+  min-width: 240px;
   border-radius: 10px !important;
   padding: 12px 14px !important;
   font-size: 15px !important;
@@ -53,28 +61,25 @@ body, .gradio-container {
   white-space: pre-wrap;
   display: inline-flex;
   align-items: flex-start;
-  border: 1px solid #1f2937;
-}
-.message.bot {
-  background: #161e30;
-  color: #e5e7eb;
+  border: 1px solid #252a38;
+  background: var(--bubble);
+  color: var(--text);
 }
 .message.user {
-  background: #1d2a3f;
-  color: #e5e7eb;
+  background: #1f2937;
 }
 .svelte-drgfj3 input, .svelte-drgfj3 textarea {
-  border-radius: 10px !important;
-  border: 1px solid #2d3a4f !important;
-  background: #0f172a !important;
-  color: #e5e7eb !important;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 12px !important;
+  border: 1px solid #2a2f3d !important;
+  background: #0d1018 !important;
+  color: var(--text) !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 .gr-button-primary {
-  background: linear-gradient(135deg, #6d28d9, #2563eb);
+  background: var(--accent);
   border-radius: 10px;
   border: none;
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 8px 20px rgba(47, 128, 237, 0.25);
   font-weight: 600;
   color: #f8fafc;
 }
@@ -85,7 +90,7 @@ body, .gradio-container {
   border-radius: 12px;
 }
 .caption {
-  color: #cbd5e1;
+  color: var(--muted);
   margin-bottom: 10px;
 }
 """

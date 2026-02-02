@@ -23,11 +23,11 @@ profile_llm = ChatOpenAI(temperature=0, model='gpt-4o-mini')
 
 APP_CSS = """
 :root {
-  --bg: #0f1117;
-  --panel: #151821;
+  --bg: #111216;
+  --panel: #111216;
   --bubble: #1c1f2a;
   --text: #e5e7eb;
-  --muted: #9ca3af;
+  --muted: #a5adbe;
   --accent: #2f80ed;
 }
 body, .gradio-container {
@@ -36,50 +36,51 @@ body, .gradio-container {
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 .gradio-container {
-  max-width: 1080px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 24px 18px 36px;
+  padding: 18px 18px 30px;
 }
 .gradio-container .prose h1, .gradio-container .prose h2, .gradio-container .prose h3 {
   color: var(--text);
 }
 .chatbot {
   border-radius: 12px !important;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-  border: 1px solid #1f2430;
-  background: var(--panel);
-  padding: 6px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4);
+  border: 1px solid #1b1d26;
+  background: #0f1116;
+  padding: 10px;
 }
 .message {
-  max-width: 82%;
-  min-width: 240px;
-  border-radius: 10px !important;
-  padding: 12px 14px !important;
+  max-width: 78%;
+  border-radius: 14px !important;
+  padding: 12px 16px !important;
   font-size: 15px !important;
   line-height: 1.55 !important;
   word-break: break-word;
   white-space: pre-wrap;
   display: inline-flex;
   align-items: flex-start;
-  border: 1px solid #252a38;
-  background: var(--bubble);
+  border: none;
+  background: #1b1d26;
   color: var(--text);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.28);
 }
 .message.user {
   background: #1f2937;
+  border: 1px solid rgba(47,128,237,0.2);
 }
 .svelte-drgfj3 input, .svelte-drgfj3 textarea {
   border-radius: 12px !important;
-  border: 1px solid #2a2f3d !important;
-  background: #0d1018 !important;
+  border: 1px solid #20222c !important;
+  background: #161821 !important;
   color: var(--text) !important;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 .gr-button-primary {
-  background: var(--accent);
+  background: #2f80ed;
   border-radius: 10px;
   border: none;
-  box-shadow: 0 8px 20px rgba(47, 128, 237, 0.25);
+  box-shadow: 0 8px 20px rgba(47, 128, 237, 0.35);
   font-weight: 600;
   color: #f8fafc;
 }

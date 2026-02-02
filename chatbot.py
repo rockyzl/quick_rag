@@ -21,6 +21,69 @@ llm = ChatOpenAI(temperature=0.5, model='gpt-4o-mini')
 # separate non-streaming LLM for profile extraction
 profile_llm = ChatOpenAI(temperature=0, model='gpt-4o-mini')
 
+APP_CSS = """
+body, .gradio-container {
+  background: #f6f7fb;
+  color: #0f172a;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+.gradio-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 18px 36px;
+}
+.gradio-container .prose h1, .gradio-container .prose h2, .gradio-container .prose h3 {
+  color: #0f172a;
+}
+.chatbot {
+  border-radius: 18px !important;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 8px;
+}
+.message {
+  max-width: 72%;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+}
+.message.bot {
+  background: #eef2ff;
+  border: 1px solid #dfe3f7;
+  color: #1f2937;
+}
+.message.user {
+  background: #e8fff3;
+  border: 1px solid #c8f3dd;
+  color: #0f172a;
+}
+.svelte-drgfj3 input, .svelte-drgfj3 textarea {
+  border-radius: 12px !important;
+  border: 1px solid #d7deea !important;
+  background: #ffffff !important;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.gr-button-primary {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+  font-weight: 600;
+}
+.gr-button-secondary, .gr-button {
+  border-radius: 10px;
+}
+.block.gradio-accordion, .panel {
+  border-radius: 14px;
+}
+.caption {
+  color: #475569;
+  margin-bottom: 10px;
+}
+"""
+
 # connect to the chromadb
 vector_store = Chroma(
     collection_name="example_collection",
@@ -238,6 +301,7 @@ chatbot = gr.ChatInterface(
     title="Quick RAG Chatbot",
     description="Conversational RAG over your PDFs. Keeps light context and shows references only when you ask.",
     theme=gr.themes.Soft(primary_hue="indigo", neutral_hue="slate"),
+    css=APP_CSS,
 )
 
 # launch the Gradio app
